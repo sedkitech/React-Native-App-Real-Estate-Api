@@ -3,6 +3,15 @@ import { StyleSheet } from "react-native";
 import { COLORS, FONT, SHADOWS, SIZES } from "../../../../constants";
 
 const styles = StyleSheet.create({
+  imgCardBackground: {
+    width: 250,
+    height: 200,
+    padding: SIZES.xLarge,
+    borderRadius: SIZES.medium,
+    justifyContent: "space-between",
+    ...SHADOWS.medium,
+    shadowColor: COLORS.white,
+  },
   container: (selectedJob, item) => ({
     width: 250,
     padding: SIZES.xLarge,
@@ -21,6 +30,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
   }),
   logoImage: {
+    width: "70%",
+    height: "70%",
+  },
+  logoOne: {
+    width: 50,
+    height: 50,
+  },
+  logoTwo: {
     width: "70%",
     height: "70%",
   },
@@ -52,7 +69,8 @@ const styles = StyleSheet.create({
   location: {
     fontSize: SIZES.medium - 2,
     fontFamily: FONT.regular,
-    color: "#B3AEC6",
+    /*  color: "#B3AEC6", */
+    color: COLORS.primary,
   },
 });
 
