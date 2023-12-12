@@ -24,7 +24,7 @@ const PopularJobCard = ({ item, selectedHome, handleCardPress }) => {
         <View style={styles.infoContainer}>
           <Text style={styles.jobName(selectedHome, item)} numberOfLines={1} ></Text>
           <Text style={styles.location} numberOfLines={1}></Text>
-          <Text style={styles.location} numberOfLines={1}>{item.address}</Text>
+          <Text style={styles.locationAdress} numberOfLines={1}>{item.address}</Text>
 
         </View>
       </ImageBackground>

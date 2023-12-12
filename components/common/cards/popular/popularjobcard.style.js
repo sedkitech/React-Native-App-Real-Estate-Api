@@ -69,8 +69,19 @@ const styles = StyleSheet.create({
   location: {
     fontSize: SIZES.medium - 2,
     fontFamily: FONT.regular,
-    /*  color: "#B3AEC6", */
-    color: COLORS.primary,
+    color: "#B3AEC6",
+
+  },
+  locationAdress: {
+    fontSize: SIZES.medium - 2,
+    fontFamily: FONT.regular,
+    color: "#B3AEC6",
+    backgroundColor: COLORS.primary,
+    borderRadius: 16,
+    paddingTop: 3,
+    paddingBottom: 3,
+    paddingLeft: 15,
+    paddingRight: 15,
   },
 });
 

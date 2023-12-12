@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   pointWrapper: {
     flexDirection: "row",
     justifyContent: "flex-start",
-    alignItems: "flex-start",
+    alignItems: "center",
     marginVertical: SIZES.small / 1.25,
   },
   pointDot: {

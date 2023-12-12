@@ -17,7 +17,7 @@ const Popularjobs = () => {
   const [selectedHome, setSelectedHome] = useState();
 
   const handleCardPress = (item) => {
-    router.push(`/properties/${item.id}`);
+    router.push(`/property-details/${item.id}`);
     setSelectedHome(item.id);
   };
   const { data, isLoading, error } = useFetch("properties/rent",
@@ -47,6 +47,9 @@ const Popularjobs = () => {
                   item={item}
                   selectedJob={selectedHome}
                   handleCardPress={handleCardPress}
+
+                /*    key={`${item.id}`}
+                   handleNavigate={() => router.push(`/property-details/${item.id}`)} */
                 />
               )}
               keyExtractor={item => item?.id}

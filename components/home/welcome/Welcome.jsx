@@ -9,8 +9,16 @@ import { useRouter } from 'expo-router';
 const Welcome = () => {
   const router = useRouter()
 
+  const [searchTerm, setSearchTerm] = useState("");
+
   const rentTypes = ["recent", "highest", "lowest"]
-  const [activeRentType, setActiveRentType] = useState("Houses");
+  const [activeRentType, setActiveRentType] = useState("recent");
+
+  function handleSearch() {
+    if (searchTerm) {
+      router.push(`/search/${searchTerm}`)
+    }
+  }
 
   return (
     <View>
@@ -19,16 +27,16 @@ const Welcome = () => {
         <Text style={styles.welcomeMessage}>Find your next home in the UK.</Text>
       </View>
 
-      <View style={styles.searchContainer}>
+      {/*    <View style={styles.searchContainer}>
         <View style={styles.searchWrapper}>
           <TextInput
             style={styles.searchInput}
-            value=''
-            onChange={() => { }}
+            value={searchTerm}
+            onChangeText={(text) => { setSearchTerm(text) }}
             placeholder='Enter a location'
           />
         </View>
-        <TouchableOpacity style={styles.searchBtn} onPress={() => { }}>
+        <TouchableOpacity style={styles.searchBtn} onPress={() => { handleSearch }}>
           <Image
             source={icons.search}
             resizeMode='contain'
@@ -56,7 +64,7 @@ const Welcome = () => {
           horizontal
         />
 
-      </View>
+      </View> */}
 
 
     </View>
